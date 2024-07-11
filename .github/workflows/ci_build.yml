@@ -9,8 +9,6 @@ jobs:
     strategy:
       matrix:
         builds:
-          - [ FiveM,  five,   windows ]
-          - [ RedM,   rdr3,   windows ]
           - [ Server, server, windows ]
           - [ Server, server, linux   ]
     name: ${{ matrix.builds[0] }}${{ matrix.builds[2] == 'linux' && ' (Linux)' || '' }}
@@ -65,4 +63,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: ${{ runner.os }}
-          path: b\server\code\bin
+          path: C:\b\server\code\bin
