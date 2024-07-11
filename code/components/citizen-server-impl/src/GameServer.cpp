@@ -920,7 +920,7 @@ namespace fx
 				auto lastSeen = (msec() - client->GetLastSeen());
 
 				// if this happened fairly early, try to find out why
-				if (lastSeen < 1500ms)
+				if (lastSeen < 40000ms)
 				{
 					auto timeoutInfo = m_net->GatherTimeoutInfo(client->GetPeer());
 
